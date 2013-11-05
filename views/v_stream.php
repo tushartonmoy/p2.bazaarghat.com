@@ -11,7 +11,7 @@
 		$name = $row['first_name'] . " " . $row['last_name'];
 		if( $file_exist ){
 			foreach($file_exist as $myfile){
-				$file = basename($myfile);
+				$file = rawurlencode(basename($myfile));
 				echo "<img src='/uploads/avatars/$file' alt='$name' width='40' height='40'/>";
 			}
 		}else{

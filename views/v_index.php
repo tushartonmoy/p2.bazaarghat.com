@@ -27,11 +27,11 @@
 	?>
 	<form method="post" action="/index/signin">
 		<label for="email" class="option-title">Email Address:</label><br />
-		<input type="text" name="email" value="<?php if( isset($_SESSION['email']) ) { echo $_SESSION['email']; unset($_SESSION['email']); } ?>"/>
+		<input type="text" name="email" id="email" value="<?php if( isset($_SESSION['email']) ) { echo $_SESSION['email']; unset($_SESSION['email']); } ?>"/>
 		<br /><br />
 		
 		<label for="password" class="option-title">Password:</label><br />
-		<input type="password" name="password" />
+		<input type="password" name="password" id="password"/>
 		<br /><br />
 		<input type="submit" name="submit" value="Sign in" class="submit" />
 	</form>

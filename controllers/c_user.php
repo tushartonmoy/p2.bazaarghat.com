@@ -149,7 +149,7 @@ class user_controller extends base_controller {
 	public function follow($following_id){
 			$table = 'follow';
 			$data = array(	"user_id"	=>	$_SESSION['user_id'],
-							"following_id"	=>	$this->DB->sanitize($following_id)
+							"following_id"	=>	$following_id
 						);
 		
 		# Using mysqli connection
@@ -185,6 +185,34 @@ class user_controller extends base_controller {
 			header("Location:/user/manage");
 			die();
 	} # End of unfollow method
+	
+	/*-------------------------------------------------------------------------------------------------
+	Add new post
+	-------------------------------------------------------------------------------------------------*/	
+	public function add(){
+		#If $_POST['submit'] is set, user has submitted form
+			if( isset( $_POST['submit'] ) ){
+				$post = trim($_POST['post']);
+				
+			# If post is empty set error flag, otherwise add in database and set flag
+				if( empty( $post ) ){
+					$_SESSION['error_post'] = "Please Enter your post";
+				}else{
+					$data = array(	"user_id"	=>	$_SESSION['user_id'],
+									"post"		=>	nl2br($post),
+									"time"		=>	date("Y-m-d H:i:s", time())
+								);
+					$id = $this->db->insert_row('post', $data);
+					$_SESSION['success_post'] = "Post added. Add another one?";
+				}
+			}
+			
+			# set template variables and load template file
+			$this->template->content = View::instance('v_add_post');
+			$this->template->title = "Add a New post";
+			$this->template->set_global('page', 'add');
+			echo $this->template;
+	} # End of add method
 	
 	/*-------------------------------------------------------------------------------------------------
 	User is signed out. Destroy session and redirect to homepage.

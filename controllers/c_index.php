@@ -78,7 +78,7 @@ class index_controller extends base_controller {
 				#Set allowed file extension
 					$allowedExts = array("gif", "jpeg", "jpg", "png");
 					$temp = explode(".", $_FILES['avatar']["name"]);
-					$extension = end($temp);
+					$extension = strtolower(end($temp));
 					if ((	($_FILES['avatar']['type'] == "image/gif")
 							|| ($_FILES['avatar']['type'] == "image/jpeg")
 							|| ($_FILES['avatar']['type'] == "image/jpg")
