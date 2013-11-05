@@ -1,0 +1,240 @@
+/* CSS Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/** Main CSS start from here **/
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+}
+a:link {
+	text-decoration: none;
+	color: #8a6b76;
+}
+a:visited {
+	color: #8a6b76
+}
+#site-content {
+	width: 700px;
+	margin: 0 auto;
+	margin-top: 20px;
+	background: #ffffff;
+}
+#header-content{
+	width: 100%;
+	margin-bottom: 10px;
+}
+#site-title {
+	float: left;
+	margin-bottom: 20px;
+}
+#site-title a {
+	color: #000;
+}
+#site-title h1 {
+	font-family: sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 10px;
+}
+#nav-menu {
+	display: table;
+	width: 100%;
+	border-collapse: collapse;
+	border: none;
+	padding: 0 10px;
+	clear: both;
+}
+#nav-menu ul {
+	display: table-row;
+}
+#nav-menu li {
+	display: table-cell;
+	margin: 0;
+	text-align: center;
+}
+#nav-menu li:first-child {
+	text-align: left;
+}
+#nav-menu li:last-child {
+	text-align: right;
+}
+#nav-menu li a {
+	font-size: 20px;
+	padding: 0 10px;
+	color: #8a6b76;
+}
+#nav-menu li a.current{
+	color: black;
+}
+#main-content {
+	background: #f1f3e3;
+	padding: 20px 10px 30px 20px;
+	overflow: auto;
+}
+#main-content p {
+	color: gray;
+	line-height: 1.2em;
+}
+#greet {
+	float: right;
+	padding: 15px;
+}
+#site-left,
+#site-right {
+	float: left;
+	width: 46%;
+	padding-right: 2%;
+}
+.main-title {
+	font-size: 20px;
+	font-weight: bold;
+	margin: 20px 0;
+}
+.option-title {
+	font-weight: bold;
+}
+.error {
+	color: red;
+	margin: 10px 0;
+}
+.success {
+	color: green;
+	margin: 10px 0;
+}
+input[type="text"],
+input[type="password"] {
+	width: 70%;
+}
+.submit {
+	background: #8d6b70;
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+	padding: 0px 10px;
+	color: white;
+	font-weight: bold;
+	font-size: 100%;
+}
+a.submit {
+	color: white;
+}
+.submit:hover {
+	background: #7d6b70;
+}
+.user {
+	background: white;
+	padding: 20px 10px;
+	overflow: auto;
+	margin: 10px 0;
+}
+.user-name {
+	float: left;
+	font-weight: bold;
+}
+.follow-status {
+	float: right;
+}
+.follow-status a {
+	color: white;
+}
+.following {
+	color: black;
+}
+.notfollowing {
+	color: #8a6b76;
+}
+textarea {
+	width: 97%;
+	height: 80px;
+}
+.post {
+	width: 96%;
+	overflow: auto;
+	background: white;
+	margin-bottom: 20px;
+	padding: 5px 10px;
+}
+.post-image {
+	width: 8%;
+	float: left;
+}
+.post-content {
+	float: left;
+	width: 90%;
+}
+.post-top {
+	width: 100%;
+}
+.post-user {
+	width: 50%;
+	float: left;
+	margin-bottom: 10px;
+	color: #8a6b76;
+	font-size: 14px;
+	font-weight: bold;
+}
+.post-option {
+	width: 50%;
+	float: right;
+	text-align: right;
+	margin-bottom: 10px;
+}
+.post-text {
+	 width: 100%;
+	 margin-top: 10px;
+	 clear: both;
+}
+.post-time {
+	width: 100%;
+	clear: both;
+	font-size: 10px;
+	margin-top: 10px;
+}
+#footer{
+	margin-top: 20px;
+	clear:both;
+}
