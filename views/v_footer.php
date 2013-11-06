@@ -1,1 +1,1 @@
-</div>	<div id="footer">		Copyright @2013-14	</div></div>
+</div>	<div id="footer">		Copyright &copy; Md Rezwan Al Islam	</div></div>

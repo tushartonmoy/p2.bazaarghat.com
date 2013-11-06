@@ -138,7 +138,7 @@ class user_controller extends base_controller {
 		# Set template variables and load template file
 			$this->template->set_global('data', $users);
 			$this->template->content = View::instance('v_manage');
-			$this->template->title = "Manage User";
+			$this->template->title = "Other Moviewers";
 			$this->template->set_global('page', 'manage');
 			echo $this->template;
 	} # End of manage method

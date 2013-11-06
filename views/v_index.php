@@ -1,10 +1,11 @@
 <?php include 'v_signin_menu.php'; ?>
 <div id="site-left">
 
-	<h1 class="main-title">Movie Review Site</h1>
-	<p>Welcome to Movie review site. Post your thought about the movies you have seen. Follow and find out what people are watching...
-	<br/><br/>
-	You can edit and delete reviews.</p>
+	<h1 class="main-title">Moviews: A Movie Review Site</h1>
+	<p>Welcome to Moviews! Post your thought about the movies you have seen. Follow and find out what people are watching...</p>
+	<br />
+	<p style='color:red;'>+1 You can edit your reviews.</p>
+	<p style='color:red;'>+1 You can delete your reviews.</p>
 	<p style="margin: 10px 0;"><a href="/signup" title="Sign up" class="submit">Sign up</a></p>
 	
 </div>

@@ -20,7 +20,7 @@ class index_controller extends base_controller {
 	-------------------------------------------------------------------------------------------------*/
 	public function index() {
 			$this->template->content = View::instance('v_index');
-			$this->template->title = "Movie World";
+			$this->template->title = "Moviews";
 			$this->template->set_global('page', 'index');
 			echo $this->template;
 
@@ -43,31 +43,31 @@ class index_controller extends base_controller {
 			# Check for errors in all the fields
 			# If First Name is empty, Set error flag
 				if( empty($first_name) ){
-					$_SESSION['error_first_name'] = "Please Enter your First Name";
+					$_SESSION['error_first_name'] = "Please enter your First Name";
 					$error_num++;
 				}
 			
 			# If Last Name is empty, set error flag
 				if( empty($last_name) ){
-					$_SESSION['error_last_name'] = "Please Enter your Last Name";
+					$_SESSION['error_last_name'] = "Please enter your Last Name";
 					$error_num++;
 				}
 			
 			# If Email field is empty or invalid, set error flag
 				if( empty($email) ){
-					$_SESSION['error_email'] = "Please Enter your Email";
+					$_SESSION['error_email'] = "Please enter your Email";
 					$error_num++;
 				}else if( !filter_var($email, FILTER_VALIDATE_EMAIL) ){
-					$_SESSION['error_email'] = "Please Enter a valid Email Address";
+					$_SESSION['error_email'] = "Please enter a valid Email Address";
 					$error_num++;
 				}
 			
 			# If Password field is empty or not 5 characters long, set error
 				if( empty($password) ){
-					$_SESSION['error_password'] = "Please Enter your Password";
+					$_SESSION['error_password'] = "Please enter your Password";
 					$error_num++;
 				}else if( strlen($password) < 5 ){
-					$_SESSION['error_password'] = "Password Must be at least 5 characters long";
+					$_SESSION['error_password'] = "Password must be at least 5 characters long";
 					$error_num++;
 				}
 			
@@ -141,7 +141,7 @@ class index_controller extends base_controller {
 				
 				# Insertion failed. It can only be because of duplicate email address. Take user to homepage
 					if(!$result){
-						$_SESSION['error_duplicate'] = "Account already exist. Please Sign in";
+						$_SESSION['error_duplicate'] = "An account already exists with this email address. Please Sign In or create a new account.";
 						header("Location:/");
 						die();
 					}

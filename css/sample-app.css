@@ -61,6 +61,7 @@ a:visited {
 	width: 700px;
 	margin: 0 auto;
 	margin-top: 20px;
+	margin-bottom: 50px;
 	background: #ffffff;
 }
 #header-content{
@@ -174,9 +175,11 @@ a.submit {
 .user-name {
 	float: left;
 	font-weight: bold;
+	padding: 12px 0;
 }
 .follow-status {
 	float: right;
+	padding: 12px 0;
 }
 .follow-status a {
 	color: white;

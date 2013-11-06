@@ -17,11 +17,11 @@
 				</li>
 				
 				<li>
-					<a href="/user/stream" title="Post stream" <?php echo ( $page == 'stream') ? 'class="current"' : '' ?>>Post stream</a>
+					<a href="/user/stream" title="Post stream" <?php echo ( $page == 'stream') ? 'class="current"' : '' ?>>Post Stream</a>
 				</li>
 				
 				<li>
-					<a href="/user/manage" title="Manage Fellow" <?php echo ( $page == 'manage') ? 'class="current"' : '' ?>>Manage Fellow</a>
+					<a href="/user/manage" title="Manage Fellow" <?php echo ( $page == 'manage') ? 'class="current"' : '' ?>>Other Moviewers</a>
 				</li>
 				
 				<li>
